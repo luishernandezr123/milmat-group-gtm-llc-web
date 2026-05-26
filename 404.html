@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="UTF-8"><title>404 - No encontrado</title></head>
-<body style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:sans-serif;background:#0a0a0a;color:#fff;">
-  <div style="text-align:center"><h1 style="font-size:4rem;font-weight:200">404</h1><p>Página no encontrada</p></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página no encontrada | MilMat Group GTM</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+        .error-page{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--navy-deep);color:var(--white);text-align:center;padding:40px}
+        .error-page h1{font-family:var(--font-display);font-size:8rem;color:var(--gold);line-height:1}
+        .error-page h2{font-family:var(--font-display);font-size:2rem;margin:16px 0}
+        .error-page p{color:rgba(255,255,255,0.6);margin-bottom:32px;font-size:1.1rem}
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div>
+            <h1>404</h1>
+            <h2>Página no encontrada</h2>
+            <p>La página que buscas no existe o fue movida.</p>
+            <a href="/" class="btn btn-gold btn-lg">Volver al inicio</a>
+        </div>
+    </div>
 </body>
 </html>
