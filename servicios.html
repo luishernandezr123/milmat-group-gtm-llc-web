@@ -12,13 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
     <header class="header scrolled" id="header">
         <div class="container nav-container">
             <a href="/" class="logo-link" aria-label="MilMat Group Inicio">
-                <img src="/assets/img/logo.png" alt="MilMat Group GTM LLC" class="logo-img">
+                <span class="logo-backdrop">
+                    <img src="/assets/img/logo.png" alt="MilMat Group GTM LLC" class="logo-img">
+                </span>
             </a>
             <nav class="nav" aria-label="Navegación principal">
                 <ul class="nav-list">
@@ -65,7 +68,7 @@
                         </ul>
                     </div>
                     <div class="service-detail-visual">
-                        <div class="service-visual-icon">📊</div>
+                        <div class="service-visual-icon"><i data-lucide="bar-chart-3"></i></div>
                         <div class="service-visual-stat">+120</div>
                         <div class="service-visual-label">puntos de aumento promedio</div>
                     </div>
@@ -91,7 +94,7 @@
                         </ul>
                     </div>
                     <div class="service-detail-visual">
-                        <div class="service-visual-icon">🏠</div>
+                        <div class="service-visual-icon"><i data-lucide="home"></i></div>
                         <div class="service-visual-stat">3-6</div>
                         <div class="service-visual-label">meses para calificar</div>
                     </div>
@@ -117,7 +120,7 @@
                         </ul>
                     </div>
                     <div class="service-detail-visual">
-                        <div class="service-visual-icon">🏢</div>
+                        <div class="service-visual-icon"><i data-lucide="building-2"></i></div>
                         <div class="service-visual-stat">100%</div>
                         <div class="service-visual-label">estructuración legal</div>
                     </div>
@@ -235,5 +238,6 @@
     </a>
 
     <script src="/assets/js/main.js"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>

@@ -12,13 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
     <header class="header scrolled" id="header">
         <div class="container nav-container">
             <a href="/" class="logo-link" aria-label="MilMat Group Inicio">
-                <img src="/assets/img/logo.png" alt="MilMat Group GTM LLC" class="logo-img">
+                <span class="logo-backdrop">
+                    <img src="/assets/img/logo.png" alt="MilMat Group GTM LLC" class="logo-img">
+                </span>
             </a>
             <nav class="nav" aria-label="Navegación principal">
                 <ul class="nav-list">
@@ -75,34 +78,35 @@
                 </div>
                 <div class="values-grid">
                     <div class="value-card">
-                        <div class="value-icon">⚖️</div>
+                        <div class="value-icon"><i data-lucide="scale"></i></div>
                         <h3>Respaldo Legal</h3>
                         <p>Cada acción que tomamos está fundamentada en las leyes federales FCRA y FDCPA. No improvisamos.</p>
                     </div>
                     <div class="value-card">
-                        <div class="value-icon">🎯</div>
+                        <div class="value-icon"><i data-lucide="target"></i></div>
                         <h3>Resultados Reales</h3>
                         <p>No prometemos milagros. Prometemos trabajo serio, estratégico y legal que produce resultados comprobables.</p>
                     </div>
                     <div class="value-card">
-                        <div class="value-icon">🤝</div>
+                        <div class="value-icon"><i data-lucide="handshake"></i></div>
                         <h3>Transparencia Total</h3>
                         <p>Te explicamos cada paso del proceso. Sabrás exactamente qué hacemos, por qué lo hacemos y qué esperar.</p>
                     </div>
                     <div class="value-card">
-                        <div class="value-icon">💡</div>
+                        <div class="value-icon"><i data-lucide="lightbulb"></i></div>
                         <h3>Educación Financiera</h3>
                         <p>No solo reparamos tu crédito. Te enseñamos a mantenerlo sano para que nunca más dependas de nadie.</p>
                     </div>
                     <div class="value-card">
-                        <div class="value-icon">🔒</div>
+                        <div class="value-icon"><i data-lucide="lock"></i></div>
                         <h3>Confidencialidad</h3>
                         <p>Tu información financiera es sagrada. Trabajamos con los más altos estándares de privacidad y protección de datos.</p>
                     </div>
                     <div class="value-card">
-                        <div class="value-icon">🚀</div>
+                        <div class="value-icon"><i data-lucide="rocket"></i></div>
                         <h3>Compromiso Total</h3>
                         <p>Tu meta es nuestra meta. No descansamos hasta que veas los resultados que mereces en tu reporte de crédito.</p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -119,21 +123,21 @@
                     <div class="legal-content">
                         <div class="legal-badges">
                             <div class="legal-badge" style="background:var(--white)">
-                                <span class="badge-icon">📋</span>
+                                <span class="badge-icon"><i data-lucide="clipboard-list"></i></span>
                                 <div>
                                     <strong>FCRA</strong>
                                     <p>Fair Credit Reporting Act — Exige que toda información en tu reporte sea precisa y verificable.</p>
                                 </div>
                             </div>
                             <div class="legal-badge" style="background:var(--white)">
-                                <span class="badge-icon">⚡</span>
+                                <span class="badge-icon"><i data-lucide="zap"></i></span>
                                 <div>
                                     <strong>FDCPA</strong>
                                     <p>Fair Debt Collection Practices Act — Regula cómo los cobradores pueden reportar y comunicarse contigo.</p>
                                 </div>
                             </div>
                             <div class="legal-badge" style="background:var(--white)">
-                                <span class="badge-icon">🛡️</span>
+                                <span class="badge-icon"><i data-lucide="shield-check"></i></span>
                                 <div>
                                     <strong>Enfoque Personalizado</strong>
                                     <p>Cada caso es único. Diseñamos una estrategia a la medida de tu situación crediticia específica.</p>
@@ -228,5 +232,6 @@
     </a>
 
     <script src="/assets/js/main.js"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
