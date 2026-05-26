@@ -76,20 +76,8 @@ if (cf) {
   document.head.appendChild(st);
 })();
 
-// ========== GSAP: HERO PARALLAX ==========
+// ========== GSAP: HERO CONTENT ANIMATION ==========
 if (document.querySelector('.hero')) {
-  gsap.to('.hero::before', {
-    y: '10%',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: 1
-    }
-  });
-  
-  // Hero content stagger
   gsap.from('.hero-badge, .hero-title, .hero-subtitle, .hero-actions, .hero-trust', {
     y: 60,
     opacity: 0,
@@ -139,26 +127,25 @@ fadeUpSections.forEach(selector => {
 
 // ========== GSAP: COUNTER ANIMATION ==========
 document.querySelectorAll('.legal-stat').forEach(stat => {
-  const text = stat.textContent;
-  const isPercent = text.includes('%');
-  const num = parseFloat(text.replace(/[^0-9.]/g, ''));
+  const text = stat.textContent.trim();
+  const target = parseFloat(text.replace(/[^0-9.]/g, ''));
+  if (isNaN(target)) return;
   
-  if (isNaN(num)) return;
+  const isPercent = text.includes('%');
+  const suffix = isPercent ? '%' : (text.startsWith('+') ? '+' : '');
   
   gsap.from(stat, {
     textContent: 0,
     duration: 2,
     ease: 'power2.out',
     snap: { textContent: 1 },
-    stagger: 0.2,
     scrollTrigger: {
       trigger: stat,
-      start: 'top 85%'
+      start: 'top 90%'
     },
     onUpdate: function() {
-      stat.textContent = isPercent 
-        ? Math.round(this.targets()[0].textContent) + '%'
-        : '+' + Math.round(this.targets()[0].textContent);
+      const val = Math.round(stat.textContent);
+      stat.textContent = suffix + val + (isPercent ? '%' : '');
     }
   });
 });
